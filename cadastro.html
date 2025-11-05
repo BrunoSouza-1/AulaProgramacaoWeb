@@ -1,0 +1,119 @@
+<!DOCTYPE html>   
+<html lang="pt-BR">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Aumigo Peludo 🐶 - Início</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+    <nav>
+            <div class="logo">Meu Aumigo Peludo 🐶</div>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul id="navMenu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projeto.html">Projetos</a></li>
+                    <li><a href="cadastro.html" class="active">Cadastro</a></li>
+                </ul>
+        </nav>    
+    </header>
+
+        <section class="hero hero-cadastro">
+            <div class="hero-content">
+                <h1>Cadastre-se como Voluntário</h1>
+                <p>Junte-se a nós para fazer a diferença na vida dos animais abandonados!</p>
+            </div>
+        </section>
+
+        <!-- Formulário de Cadastro -->
+        <main>
+        <section class="csignup-section">
+            <h2>Cadastro de Voluntários</h2>
+          <div class="success-message" id="successMessage">
+               ✅ Cadastro realizado com sucesso! Obrigado por se juntar a nós.
+            </div>
+            <form id="volunteerForm">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99882-4192" required> 
+                    </div>
+                    <div class="form-group">
+                        <label for="idade"> Idade *</label>
+                        <input type="number" id="idade" name="idade" min="16" max="100" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Disponibilidade</legend>
+                    <div class="form-group">
+                        <label for="Disponibilidade">Quais dias você pode voluntariar?</label>
+                        <select id="disponibilidade" name="disponibilidade" required>
+                            <option value="">Selecione...</option>
+                            <option value="dias_semana">Dias de úteis</option>
+                            <option value="finais_semana">Finais de semana</option>
+                            <option value="ambos">Ambos</option>
+                            <option value="pontual">Ações pontuais</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                            <label for="atividades">Quais atividades você prefere? (Selecione uma ou mais)</label>
+                            <select id="atividades" name="atividades" required multiple size="8">
+                                <option value="">Selecione...</option>
+                                <option value="cuidados_animais">Cuidados com os animais</option>
+                                <option value="eventos">Organização de eventos</option>
+                                <option value="divulgacao">Divulgação nas redes sociais</option>
+                                <option value="arrecadacao">Arrecadação de fundos</option>
+                                <option value="logistica">Logística e transporte de doações</option>
+                                <option value="manutencao_reparos">Manutenção e Pequenos reparos</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informações Adicionais</legend>
+                    <div class="form-group">
+                        <label for="experiencia">Você já participou de ações voluntárias antes?</label>
+                        <textarea id="experiencia" name="experiencia" placeholder="Conte-nos sobre sua experiência..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="motivacao">Por que você quer ser voluntário?</label>
+                        <textarea id="motivacao" name="motivacao" placeholder="Compartilhe sua motivação..."></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-primary">Enviar Cadastro</button>
+            </form>
+             <!-- Lista de Voluntários Cadastrados -->
+            <section class="voluntarios-lista">
+                <h2>Voluntários Cadastrados</h2>
+                <div id="tabelaVoluntarios">
+                    <!-- Aqui a tabela será gerada automaticamente pelo JavaScript -->
+                </div>
+            </section>
+
+        </section>
+         </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Organização Aumigo Peludo. Todos os direitos reservados.</p>
+    <p>Feito com ❤️ e muitas patinhas para transformar vidas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

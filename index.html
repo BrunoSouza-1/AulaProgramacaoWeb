@@ -3,43 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de usuário de ONG Amigão</title>
+    <title>Meu Aumigo Peludo 🐶 - Início</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header></header>
-        <h1>Usuário</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="projeto.html">Projeto</a></li>
-                <li><a href="cadatro.html">Cadastro</a></li>
+    <!-- header -->
+    <header>
+    <nav>
+            <div class="logo">Meu Aumigo Peludo 🐶</div>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul id="navMenu">
+                   <li><a href="index.html" class="active">Início</a></li>
+                   <li><a href="projeto.html">Projetos</a></li>
+                   <li><a href="cadastro.html">Seja Voluntário</a></li>
             </ul>
-        </nav>    
+        </nav>
     </header>
-    <main>
-        <section>
-            <h2>Quem somos</h2>
-            <p>Somos uma organizção sem fins lucrativos que atua com animais abandonados</p>
-            <img src="imagens/cachorro.jpg" alt="Voluntários em ação">
-        </section>
 
-        <section>
-            <h2>Missão da ONG Amigão</h2>
-            <p>Promover diginidade e oporturnidade de acolhimento aos animais abandonados</p>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Seja a Mudança na Vida de Um Cão</h1>
+            <p>Com o seu tempo e amor, podemos resgatar, cuidar e encontrar lares cheios de afeto para nossos peludos. Venha fazer parte!</p>
+            <a href="cadastro.html" class="btn-primary">Quero fazer parte!</a>
+        </div>
+    </section>
 
-        <section>
-            <h2> contato com ONG Amigão</h2>
-            <address>
-                <p>Endereço: Rua passagem Bingo, 123 - Bairro Bela Vista - São Paulo/SP</p>
-                <p>Telefone: (11) 99882-4192</p>
-                <p>Email: contato@organizacaoongamigao.com.br</p>
-            </address>
-        </section>
-    </main>
+    <!-- Quem Somos -->
+    <section class="about">
+        <h2>Quem Somos</h2>
+        <p class="about-intro">Nascemos do desejo incondicional de transformar vidas caninas abandonadas e maltratadas. Somos uma organização sem fins lucrativos, dedicada ao resgate, reabilitação e, principalmente, à busca por um Lar Eterno para cada cachorro sob nossos cuidados.</p>
 
+        <div class="mission-cards">
+
+            <div class="card">
+                <i class="fas fa-heartbeat"></i> <h3>Nosso Compromisso</h3>
+            <p>Atuamos no acolhimento de cães em situação de risco, oferecendo-lhes todos os cuidados veterinários necessários, alimentação de qualidade e muito amor.Acreditamos que todos os animais merecem dignidade e uma segunda chance, e trabalhamos incansavelmente para reescrever as histórias de cada patinha que chega ao nosso abrigo.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-handshake"></i> <h3>Junte-se à Matilha</h3>
+            <p>Nossa causa é mantida graças à dedicação de voluntários e a doações. Conheça nossos projetos e descubra como você também pode fazer parte dessa corrente de carinho. Sua ajuda é fundamentalpara que mais focinhos encontrem a felicidade.</p>
+        </div>
+
+        </div>>
+    </section>  
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 ONG Amigão</p>
+        <p>&copy; 2025 Organização Aumigo Peludo. Todos os direitos reservados.</p>
+     <p>Feito com ❤️ e muitas patinhas para transformar vidas.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
