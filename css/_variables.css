@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Quicksand:wght@400;700&display=swap');
+
+:root {
+    --color-primary: #ff9800;          
+    --color-secondary: #4a3f35;        
+    --color-tertiary: #aed581;         
+    --color-light: #ffffff;            
+    --color-gray-100: #f5f5f5;         
+    --color-gray-500: #cccccc;         
+    --color-error: #dc3545;           
+    --color-focus: #007bff;            
+
+    --font-size-xs: 0.75rem; 
+    --font-size-sm: 0.875rem; 
+    --font-size-base: 1rem; 
+    --font-size-lg: 1.5rem; 
+    --font-size-xl: 3.5rem; 
+
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 48px;
+    --space-6: 64px;
+}

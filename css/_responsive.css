@@ -1,0 +1,63 @@
+@media screen and (max-width: 768px) {
+nav ul {
+        display: none; 
+        flex-direction: column; 
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background: #4a3f35; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        padding: 1rem 0;
+ } 
+ #navMenu.active { 
+        display: flex; 
+    }
+    .menu-toggle {
+        display: block; 
+     }
+        nav ul li {
+        text-align: center;
+        margin: 0.5rem 0;
+}
+nav {
+        padding: 0 1rem;
+    }
+    .hero {
+        height: auto;
+        padding: 100px 1rem 40px; 
+        background-position: center bottom;
+    }
+.hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+.mission-cards {
+        flex-direction: column; 
+    }
+}
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: var(--font-size-lg); /* Ex: 1.5rem */
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .mission-cards {
+        gap: var(--space-2); 
+    }
+    nav, .about {
+        padding: 0 var(--space-4);
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .hero-content, .about {
+        max-width: 1100px;
+    }
+}
+@media screen and (min-width: 1201px) {
+    .about {
+        padding: var(--space-6) 2rem; 
+    }
+}
