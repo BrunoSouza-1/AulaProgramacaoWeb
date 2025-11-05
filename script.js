@@ -1,7 +1,10 @@
 // ==================== Menu Mobile ====================
 function toggleMenu() {
     const menu = document.getElementById('navMenu');
+    const toggleButton = document.querySelector('.menu-toggle');
     menu.classList.toggle('active');
+    const isExpanded = menu.classList.contains('active');
+    toggleButton.setAttribute('aria-expanded', isExpanded);
 }
 
 // ==================== Scroll Suave ====================

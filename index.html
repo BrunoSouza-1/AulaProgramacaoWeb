@@ -12,7 +12,11 @@
     <header>
     <nav>
             <div class="logo">Meu Aumigo Peludo 🐶</div>
-                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <button class="menu-toggle" onclick="toggleMenu()"
+                    aria-expanded="false" 
+                    aria-controls="navMenu">       
+                    ☰
+                </button>
                 <ul id="navMenu">
                    <li><a href="index.html" class="active">Início</a></li>
                    <li><a href="projeto.html">Projetos</a></li>
