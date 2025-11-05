@@ -340,6 +340,7 @@ nav {
     .hero {
         height: auto;
         padding: 100px 1rem 40px; 
+        background-position: center bottom;
     }
 .hero h1 {
         font-size: 2.5rem;
