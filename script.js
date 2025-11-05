@@ -146,6 +146,48 @@ function aplicarMascaraTelefone() {
     }
 }
 
+function loadPage(url) {
+    const mainContent = document.querySelector('main');
+fetch(url)
+        .then(response => response.text())
+        .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const newMain = doc.querySelector('main');
+            if (newMain) {
+                mainContent.innerHTML = newMain.innerHTML;
+                document.title = doc.querySelector('title').textContent;
+                initListeners();
+            } else {
+                console.error("Erro SPA: Tag <main> não encontrada na página carregada:", url);
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao carregar a página:', error);
+            window.location.href = url;
+            });
+}
+function initListeners() {
+    const formCadastro = document.getElementById('volunteerForm');
+    if (formCadastro) {
+        formCadastro.addEventListener('submit', handleSubmit);
+    }
+    aplicarMascaraTelefone();
+    exibirVoluntarios();
+    }
+document.addEventListener('click', (event) => {
+    const link = event.target.closest('a');
+    if (link && link.href.includes(window.location.host) && link.href.endsWith('.html')) {
+        event.preventDefault();
+        const targetUrl = link.href;
+        history.pushState(null, '', targetUrl);
+        loadPage(targetUrl);
+        const navMenu = document.getElementById('navMenu');
+        if (navMenu) {
+            navMenu.classList.remove('active');
+        }
+    }
+});
 
 // Inicializa TUDO ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
@@ -164,5 +206,3 @@ document.addEventListener('DOMContentLoaded', () => {
     exibirVoluntarios();
 });
 
-// ==================== Listener do Formulário ====================
-document.getElementById('volunteerForm').addEventListener('submit', handleSubmit);
