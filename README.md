@@ -36,3 +36,6 @@ Este projeto foi desenvolvido para cumprir as etapas da disciplina de Experiênc
 * **style:** aplica Grid Layout e implementa 5 breakpoints responsivos.
 * **style:** define Design System (variáveis CSS) e modulariza CSS.
 * **feat:** implementa estrutura base HTML5 e tags semânticas.
+***
+**Nota sobre o Histórico de Desenvolvimento:** Os commits mais antigos no histórico (`Site Meu Aumigo`, `v02 finalizando`, etc.) representam checkpoints de deploy rápido. O desenvolvimento principal e a adição de funcionalidades (seguindo o padrão Git Semântico) estão contidos nos commits prefixados por `feat:`, `style:` e `chore:`, que representam as entregas oficiais do projeto.
+***
