@@ -161,6 +161,7 @@ fetch(url)
                 mainContent.innerHTML = newMain.innerHTML;
                 document.title = doc.querySelector('title').textContent;
                 initListeners();
+                setActiveLink();
             } else {
                 console.error("Erro SPA: Tag <main> não encontrada na página carregada:", url);
             }
@@ -200,6 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        initListeners();
+        setActiveLink();
     });
 
     // Chama a função da máscara
@@ -208,4 +211,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mostra voluntários já cadastrados
     exibirVoluntarios();
 });
-
